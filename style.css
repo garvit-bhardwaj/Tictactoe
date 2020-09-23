@@ -4,15 +4,58 @@
     box-sizing:border-box;
 }
 
+body{
+    background:#8a7799;
+}
+
 table{
-    border:1px solid #000;
     border-collapse: collapse; 
-    width:25%;
-    height:40vh;
     margin:auto;
     margin-top:20vh;
 }
 
 td{
-    border: 1px solid #000;
+    border: 5px dashed #fff;
+    font-size:70px;
+    width:100px;
+    height:100px;
+    vertical-align: middle;
+    font-family:cursive;
+    cursor:pointer;
+}
+
+tr:first-of-type td{
+    border-top:0;
+}
+tr:last-of-type td{
+    border-bottom:0;
+}
+
+tr td:first-of-type{
+    border-left:0;
+}
+tr td:last-of-type{
+    border-right:0;
+}
+
+.endgame{
+    width:50%;
+    height:40vh;
+    position:relative;
+    bottom:35vh;
+    left:25%;
+    background:#da1b1b99;
+    display:none;
+    border-radius:15px;
+}
+#replay{
+    position:absolute;
+    bottom:10px;
+    left:45%;
+    width:10%;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top: 3px;
+    padding-bottom:3px;
+    border-radius:5px;
 }
