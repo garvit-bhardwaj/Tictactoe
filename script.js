@@ -148,7 +148,7 @@ function turn(cellId,player)
     document.getElementById(cellId).removeEventListener("click",turnclick);
     origBoard[cellId]=player;
     gamewon();
-    if(checktie())
+    if(!gamewon&&checktie())
     {
         gametie();
     }
