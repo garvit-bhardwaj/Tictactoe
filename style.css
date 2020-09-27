@@ -8,10 +8,17 @@ body{
     background:#8a7799;
 }
 
+h1{
+    text-align:center;
+}
+h1:first-of-type{
+    transform:translateY(15px);
+}
+
 table{
     border-collapse: collapse; 
     margin:auto;
-    margin-top:20vh;
+    margin-top:5vh;
     position:absolute;
     left:50%;
     margin-left:-155px;
@@ -19,7 +26,7 @@ table{
 }
 
 td{
-    border: 5px dashed #fff;
+    border: 3px dashed #fff;
     font-size:70px;
     width:102px;
     height:102px;
@@ -45,17 +52,28 @@ tr td:last-of-type{
 
 .endgame{
     width:350px;
-    top:120px;
-    background:rgba(205,133,63,0.8);
+    top:63vh;
+    background:#ffffff30;
     position:absolute;
     left:50%;
     height:175px;
     margin-left:-175px;
     padding-top:50px;
-    text-align:center;
     padding-bottom:50px;
     border-radius:5px;
     color:#000;
     font-size:2em;
     display:none;
+}
+.text{
+    text-align:center;
+}
+#replay{
+    position:absolute;
+    bottom:20px;
+    left:30%;
+    width:40%;
+    height:18%;
+    border-radius:10px;
+    font-size:1.2rem;
 }
