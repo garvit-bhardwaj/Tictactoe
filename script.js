@@ -43,7 +43,7 @@ function gamewon()
         document.getElementById("3").style.background="#ffa0a0";
         document.getElementById("4").style.background="#ffa0a0";
         document.getElementById("5").style.background="#ffa0a0";
-        if(origBoard[0]=='X')
+        if(origBoard[3]=='X')
         gameOver(aiPlayer);
         else
         gameOver(huPlayer);
@@ -53,7 +53,7 @@ function gamewon()
         document.getElementById("6").style.background="#ffa0a0";
         document.getElementById("7").style.background="#ffa0a0";
         document.getElementById("8").style.background="#ffa0a0";
-        if(origBoard[0]=='X')
+        if(origBoard[6]=='X')
         gameOver(aiPlayer);
         else
         gameOver(huPlayer);
@@ -73,7 +73,7 @@ function gamewon()
         document.getElementById("1").style.background="#ffa0a0";
         document.getElementById("4").style.background="#ffa0a0";
         document.getElementById("7").style.background="#ffa0a0";
-        if(origBoard[0]=='X')
+        if(origBoard[1]=='X')
         gameOver(aiPlayer);
         else
         gameOver(huPlayer);
@@ -83,7 +83,7 @@ function gamewon()
         document.getElementById("2").style.background="#ffa0a0";
         document.getElementById("5").style.background="#ffa0a0";
         document.getElementById("8").style.background="#ffa0a0";
-        if(origBoard[0]=='X')
+        if(origBoard[2]=='X')
         gameOver(aiPlayer);
         else
         gameOver(huPlayer);
@@ -103,12 +103,11 @@ function gamewon()
         document.getElementById("2").style.background="#ffa0a0";
         document.getElementById("4").style.background="#ffa0a0";
         document.getElementById("6").style.background="#ffa0a0";
-        if(origBoard[0]=='X')
+        if(origBoard[2]=='X')
         gameOver(aiPlayer);
         else
         gameOver(huPlayer);
     }
-    else return;
 }
 
 function gameOver(winner)
@@ -128,6 +127,8 @@ function gameOver(winner)
 
 function turnclick(square){
     turn(square.target.id,huPlayer);
+    if(!gamewon())
+    {
     for(let t=0; ;t++)
     {
         if(origBoard[t]==='X'||origBoard[t]==='0')
@@ -137,6 +138,7 @@ function turnclick(square){
             turn(t,aiPlayer);
             break;
         }
+    }
     }
 }
 
