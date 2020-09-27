@@ -12,14 +12,19 @@ table{
     border-collapse: collapse; 
     margin:auto;
     margin-top:20vh;
+    position:absolute;
+    left:50%;
+    margin-left:-155px;
+    top:50px;
 }
 
 td{
     border: 5px dashed #fff;
     font-size:70px;
-    width:100px;
-    height:100px;
+    width:102px;
+    height:102px;
     vertical-align: middle;
+    text-align:center;
     font-family:cursive;
     cursor:pointer;
 }
@@ -39,23 +44,18 @@ tr td:last-of-type{
 }
 
 .endgame{
-    width:50%;
-    height:40vh;
-    position:relative;
-    bottom:35vh;
-    left:25%;
-    background:#da1b1b99;
-    display:none;
-    border-radius:15px;
-}
-#replay{
+    width:350px;
+    top:120px;
+    background:rgba(205,133,63,0.8);
     position:absolute;
-    bottom:10px;
-    left:45%;
-    width:10%;
-    padding-left:10px;
-    padding-right:10px;
-    padding-top: 3px;
-    padding-bottom:3px;
+    left:50%;
+    height:175px;
+    margin-left:-175px;
+    padding-top:50px;
+    text-align:center;
+    padding-bottom:50px;
     border-radius:5px;
+    color:#000;
+    font-size:2em;
+    display:none;
 }

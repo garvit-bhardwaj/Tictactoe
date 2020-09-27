@@ -7,13 +7,12 @@
     <title>Tic-tac-toe</title>
 </head>
 <body>
-    <div class="container">
     <table id="gameboard">
-        <tr><td id="0"></td><td id="1"></td><td id="2"></td></tr>
-        <tr><td id="3"></td><td id="4"></td><td id="5"></td></tr>
-        <tr><td id="6"></td><td id="7"></td><td id="8"></td></tr>
+        <tr><td id="0" class="cell"></td><td id="1" class="cell"></td><td id="2" class="cell"></td></tr>
+        <tr><td id="3" class="cell"></td><td id="4" class="cell"></td><td id="5" class="cell"></td></tr>
+        <tr><td id="6" class="cell"></td><td id="7" class="cell"></td><td id="8" class="cell"></td></tr>
     </table>
-    <div class="endgame"><button onclick="startgame()" id="replay">Replay</button></div>
-    </div>
+    <div class="endgame"><div class="text"></div><button onclick="startgame()" id="replay">Replay</button></div>
+    <script src="script.js"></script>
 </body>
 </html>
