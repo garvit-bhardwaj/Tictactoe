@@ -123,6 +123,7 @@ function gameOver(winner)
     {
         document.getElementById(i).removeEventListener("click",turnclick);
     }
+    return true;
 }
 
 function turnclick(square){
@@ -147,8 +148,11 @@ function turn(cellId,player)
     document.getElementById(cellId).innerText=player;
     document.getElementById(cellId).removeEventListener("click",turnclick);
     origBoard[cellId]=player;
-    gamewon();
-    if(checktie())
+    if(gamewon())
+    {
+        gamewon();
+    }
+    if(checktie()&&(!gameOver()))
     {
         gametie();
     }
@@ -168,6 +172,7 @@ function checktie()
 
 function gametie()
 {
+    console.log("i am active");
     document.querySelector(".endgame").style.display="block";
     document.querySelector(".text").innerText= "It's a tie!";
     for(var i=0;i<cells.length;i++)
