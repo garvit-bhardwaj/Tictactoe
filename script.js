@@ -139,13 +139,15 @@ function turnclick(square){
     turn(square.target.id,huPlayer);
     if(!gamewon())
     {
-    for(let t=0; ;t++)
+    while(true)
     {
-        if(origBoard[t]==='X'||origBoard[t]==='0')
+        let x=Math.floor(Math.random()*9);
+        console.log(x);
+        if(origBoard[x]==='X'||origBoard[x]==='0')
         continue;
         else
         {
-            turn(t,aiPlayer);
+            turn(x,aiPlayer);
             break;
         }
     }
