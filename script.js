@@ -139,7 +139,8 @@ function turnclick(square){
     turn(square.target.id,huPlayer);
     if(!gamewon())
     {
-    while(true)
+        let count=1000;
+    while(count--)
     {
         let x=Math.floor(Math.random()*9);
         console.log(x);
