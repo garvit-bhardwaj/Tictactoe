@@ -37,6 +37,7 @@ function gamewon()
         gameOver(aiPlayer);
         else
         gameOver(huPlayer);
+        return true;
     }
     else if(((origBoard[3]===origBoard[4])&&(origBoard[4]===origBoard[5])))
     {
@@ -47,6 +48,7 @@ function gamewon()
         gameOver(aiPlayer);
         else
         gameOver(huPlayer);
+        return true;
     }
     else if(((origBoard[6]===origBoard[7])&&(origBoard[7]===origBoard[8])))
     {
@@ -57,6 +59,7 @@ function gamewon()
         gameOver(aiPlayer);
         else
         gameOver(huPlayer);
+        return true;
     }
     else if(((origBoard[0]===origBoard[3])&&(origBoard[3]===origBoard[6])))
     {
@@ -67,6 +70,7 @@ function gamewon()
         gameOver(aiPlayer);
         else
         gameOver(huPlayer);
+        return true;
     }
     else if(((origBoard[1]===origBoard[4])&&(origBoard[4]===origBoard[7])))
     {
@@ -77,6 +81,7 @@ function gamewon()
         gameOver(aiPlayer);
         else
         gameOver(huPlayer);
+        return true;
     }
     else if(((origBoard[2]===origBoard[5])&&(origBoard[5]===origBoard[8])))
     {
@@ -87,6 +92,7 @@ function gamewon()
         gameOver(aiPlayer);
         else
         gameOver(huPlayer);
+        return true;
     }
     else if(((origBoard[0]===origBoard[4])&&(origBoard[4]===origBoard[8])))
     {
@@ -97,6 +103,7 @@ function gamewon()
         gameOver(aiPlayer);
         else
         gameOver(huPlayer);
+        return true;
     }
     else if(((origBoard[2]===origBoard[4])&&(origBoard[4]===origBoard[6])))
     {
@@ -107,7 +114,9 @@ function gamewon()
         gameOver(aiPlayer);
         else
         gameOver(huPlayer);
+        return true;
     }
+    else return false;
 }
 
 function gameOver(winner)
@@ -152,7 +161,7 @@ function turn(cellId,player)
     {
         gamewon();
     }
-    if(checktie()&&(!gameOver()))
+    if(checktie()&&(!gamewon()))
     {
         gametie();
     }
