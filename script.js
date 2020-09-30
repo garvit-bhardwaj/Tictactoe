@@ -201,7 +201,114 @@ function gametie()
 function aiturn()
 {
     // 1st wincombo
-    if(origBoard[0]===origBoard[1]&&(origBoard[2]!=="0"&&origBoard[2]!=="X"))
+    if(origBoard[0]===origBoard[1]&&(origBoard[2]!=="0"&&origBoard[2]!=="X"&&origBoard[0]==="X"))
+    {
+        turn(2,aiPlayer);
+    }
+    else if(origBoard[1]===origBoard[2]&&(origBoard[0]!=="0"&&origBoard[0]!=="X"&&origBoard[1]==="X"))
+    {
+        turn(0,aiPlayer);
+    }
+    else if(origBoard[0]===origBoard[2]&&(origBoard[1]!=="0"&&origBoard[1]!=="X"&&origBoard[0]==="X"))
+    {
+        turn(1,aiPlayer);
+    }
+    
+    //2nd wincombo
+    else if(origBoard[3]===origBoard[4]&&(origBoard[5]!=="0"&&origBoard[5]!=="X"&&origBoard[3]==="X"))
+    {
+        turn(5,aiPlayer);
+    }
+    else if(origBoard[4]===origBoard[5]&&(origBoard[3]!=="0"&&origBoard[3]!=="X"&&origBoard[4]==="X"))
+    {
+        turn(3,aiPlayer);
+    }
+    else if(origBoard[3]===origBoard[5]&&(origBoard[4]!=="0"&&origBoard[4]!=="X"&&origBoard[3]==="X"))
+    {
+        turn(4,aiPlayer);
+    }
+
+    //3rd wincombo
+    else if(origBoard[6]===origBoard[7]&&(origBoard[8]!=="0"&&origBoard[8]!=="X"&&origBoard[6]==="X"))
+    {
+        turn(8,aiPlayer);
+    }
+    else if(origBoard[7]===origBoard[8]&&(origBoard[6]!=="0"&&origBoard[6]!=="X"&&origBoard[7]==="X"))
+    {
+        turn(6,aiPlayer);
+    }
+    else if(origBoard[6]===origBoard[8]&&(origBoard[7]!=="0"&&origBoard[7]!=="X"&&origBoard[6]==="X"))
+    {
+        turn(7,aiPlayer);
+    }
+
+    //4th wincombo
+    else if(origBoard[0]===origBoard[3]&&(origBoard[6]!=="0"&&origBoard[6]!=="X"&&origBoard[0]==="X"))
+    {
+        turn(6,aiPlayer);
+    }
+    else if(origBoard[3]===origBoard[6]&&(origBoard[0]!=="0"&&origBoard[0]!=="X"&&origBoard[3]==="X"))
+    {
+        turn(0,aiPlayer);
+    }
+    else if(origBoard[0]===origBoard[6]&&(origBoard[3]!=="0"&&origBoard[3]!=="X"&&origBoard[0]==="X"))
+    {
+        turn(3,aiPlayer);
+    }
+
+    //5th wincombo
+    else if(origBoard[1]===origBoard[4]&&(origBoard[7]!=="0"&&origBoard[7]!=="X"&&origBoard[1]==="X"))
+    {
+        turn(7,aiPlayer);
+    }
+    else if(origBoard[4]===origBoard[7]&&(origBoard[1]!=="0"&&origBoard[1]!=="X"&&origBoard[4]==="X"))
+    {
+        turn(1,aiPlayer);
+    }
+    else if(origBoard[1]===origBoard[7]&&(origBoard[4]!=="0"&&origBoard[4]!=="X"&&origBoard[1]==="X"))
+    {
+        turn(4,aiPlayer);
+    }
+
+    //6th wincombo
+    else if(origBoard[2]===origBoard[5]&&(origBoard[8]!=="0"&&origBoard[8]!=="X"&&origBoard[2]==="X"))
+    {
+        turn(8,aiPlayer);
+    }
+    else if(origBoard[5]===origBoard[8]&&(origBoard[2]!=="0"&&origBoard[2]!=="X"&&origBoard[5]==="X"))
+    {
+        turn(2,aiPlayer);
+    }
+    else if(origBoard[2]===origBoard[8]&&(origBoard[5]!=="0"&&origBoard[5]!=="X"&&origBoard[2]==="X"))
+    {
+        turn(5,aiPlayer);
+    }
+
+    //7th wincombo
+    else if(origBoard[0]===origBoard[4]&&(origBoard[8]!=="0"&&origBoard[8]!=="X"&&origBoard[0]==="X"))
+    {
+        turn(8,aiPlayer);
+    }
+    else if(origBoard[4]===origBoard[8]&&(origBoard[0]!=="0"&&origBoard[0]!=="X"&&origBoard[4]==="X"))
+    {
+        turn(0,aiPlayer);
+    }
+    else if(origBoard[0]===origBoard[8]&&(origBoard[4]!=="0"&&origBoard[4]!=="X"&&origBoard[0]==="X"))
+    {
+        turn(4,aiPlayer);
+    }
+
+    //8th wincombo
+    else if(origBoard[2]===origBoard[4]&&(origBoard[6]!=="0"&&origBoard[6]!=="X"&&origBoard[2]==="X"))
+    {
+        turn(6,aiPlayer);
+    }
+    else if(origBoard[4]===origBoard[6]&&(origBoard[2]!=="0"&&origBoard[2]!=="X"&&origBoard[4]==="X"))
+    {
+        turn(2,aiPlayer);
+    }
+    // 1st wincombo
+    else if(origBoard[0]===origBoard[1]&&(origBoard[2]!=="0"&&origBoard[2]!=="X"))
     {
         turn(2,aiPlayer);
     }
