@@ -307,38 +307,6 @@ function aiturn()
     {
         turn(2,aiPlayer);
     }
-    else if(notsoimp===2&&(origBoard[4]==="0")&&(origBoard[0]==="0"||origBoard[2]==="0"||origBoard[6]==="0"||origBoard[8]==="0"))
-    {
-        let here = Math.floor(Math.random()*2);
-        if(origBoard[0]==="0")
-        {
-            if(here===0)
-            turn(2,aiPlayer);
-            else
-            turn(6,aiPlayer);
-        }
-        else if(origBoard[2]==="0")
-        {
-            if(here===0)
-            turn(0,aiPlayer);
-            else
-            turn(8,aiPlayer);
-        }
-        else if(origBoard[6]==="0")
-        {
-            if(here===0)
-            turn(0,aiPlayer);
-            else
-            turn(8,aiPlayer);
-        }
-        else if(origBoard[8]==="0")
-        {
-            if(here===0)
-            turn(2,aiPlayer);
-            else
-            turn(6,aiPlayer);
-        }
-    }
     // 1st wincombo
     else if(origBoard[0]===origBoard[1]&&(origBoard[2]!=="0"&&origBoard[2]!=="X"))
     {
@@ -466,6 +434,38 @@ function aiturn()
         turn(6,aiPlayer);
         else
         turn(8,aiPlayer);
+    }
+    else if(notsoimp===2&&(origBoard[4]==="0")&&(origBoard[0]==="0"||origBoard[2]==="0"||origBoard[6]==="0"||origBoard[8]==="0"))
+    {
+        let here = Math.floor(Math.random()*2);
+        if(origBoard[0]==="0")
+        {
+            if(here===0)
+            turn(2,aiPlayer);
+            else
+            turn(6,aiPlayer);
+        }
+        else if(origBoard[2]==="0")
+        {
+            if(here===0)
+            turn(0,aiPlayer);
+            else
+            turn(8,aiPlayer);
+        }
+        else if(origBoard[6]==="0")
+        {
+            if(here===0)
+            turn(0,aiPlayer);
+            else
+            turn(8,aiPlayer);
+        }
+        else if(origBoard[8]==="0")
+        {
+            if(here===0)
+            turn(2,aiPlayer);
+            else
+            turn(6,aiPlayer);
+        }
     }
     else if(notsoimp===2&&((origBoard[0]==="0"&&origBoard[8]==="0")||(origBoard[2]==="0"&&origBoard[6]==="0")))
     {
