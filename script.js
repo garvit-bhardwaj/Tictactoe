@@ -200,8 +200,28 @@ function gametie()
 
 function aiturn()
 {
+    if(notsoimp===1&&(origBoard[0]==="0"||origBoard[2]==="0"||origBoard[6]==="0"||origBoard[8]==="0"))
+    {
+        turn(4,aiPlayer);
+    }
+    else if(notsoimp===1&&(origBoard[4]==="0"))
+    {
+        let here=Math.floor(Math.random()*4);
+        if(here===0)
+        turn(0,aiPlayer);
+        else if(here===1)
+        turn(2,aiPlayer);
+        else if(here===2)
+        turn(6,aiPlayer);
+        else
+        turn(8,aiPlayer);
+    }
+    else if(notsoimp===1)
+    {
+        turn(4,aiPlayer);
+    }
     // 1st wincombo
-    if(origBoard[0]===origBoard[1]&&(origBoard[2]!=="0"&&origBoard[2]!=="X"&&origBoard[0]==="X"))
+    else if(origBoard[0]===origBoard[1]&&(origBoard[2]!=="0"&&origBoard[2]!=="X"&&origBoard[0]==="X"))
     {
         turn(2,aiPlayer);
     }
@@ -412,6 +432,7 @@ function aiturn()
     }
     else if(origBoard[4]===origBoard[6]&&(origBoard[2]!=="0"&&origBoard[2]!=="X"))
     {
+        console.log("hey");
         turn(2,aiPlayer);
     }
     else if(origBoard[2]===origBoard[6]&&(origBoard[4]!=="0"&&origBoard[4]!=="X"))
@@ -419,52 +440,76 @@ function aiturn()
         //console.log("hey");
         turn(4,aiPlayer);
     }
-    else if(notsoimp===1&&(origBoard[0]==="0"||origBoard[2]==="0"||origBoard[6]==="0"||origBoard[8]==="0"))
-    {
-        turn(4,aiPlayer);
-    }
-    else if(notsoimp===1&&(origBoard[4]==="0"))
-    {
-        let here=Math.floor(Math.random()*4);
-        if(here===0)
-        turn(0,aiPlayer);
-        else if(here===1)
-        turn(2,aiPlayer);
-        else if(here===2)
-        turn(6,aiPlayer);
-        else
-        turn(8,aiPlayer);
-    }
     else if(notsoimp===2&&(origBoard[4]==="0")&&(origBoard[0]==="0"||origBoard[2]==="0"||origBoard[6]==="0"||origBoard[8]==="0"))
     {
         let here = Math.floor(Math.random()*2);
         if(origBoard[0]==="0")
         {
             if(here===0)
-            turn(2,aiPlayer);
+            {
+                if(origBoard[2]!=="0"&&origBoard[2]!=="X")
+                turn(2,aiPlayer);
+                else
+                turn(6,aiPlayer);
+            }
             else
-            turn(6,aiPlayer);
+            {
+                if(origBoard[6]!=="0"&&origBoard[6]!=="X")
+                turn(6,aiPlayer);
+                else
+                turn(2,aiPlayer);
+            }
         }
         else if(origBoard[2]==="0")
         {
             if(here===0)
-            turn(0,aiPlayer);
+            {
+                if(origBoard[0]!=="0"&&origBoard[0]!=="X")
+                turn(0,aiPlayer);
+                else
+                turn(8,aiPlayer);
+            }
             else
-            turn(8,aiPlayer);
+            {
+                if(origBoard[8]!=="0"&&origBoard[8]!=="X")
+                turn(8,aiPlayer);
+                else
+                turn(0,aiPlayer);
+            }
         }
         else if(origBoard[6]==="0")
         {
             if(here===0)
-            turn(0,aiPlayer);
+            {
+                if(origBoard[0]!=="0"&&origBoard[0]!=="X")
+                turn(0,aiPlayer);
+                else
+                turn(8,aiPlayer);
+            }
             else
-            turn(8,aiPlayer);
+            {
+                if(origBoard[8]!=="0"&&origBoard[8]!=="X")
+                turn(8,aiPlayer);
+                else
+                turn(0,aiPlayer);
+            }
         }
         else if(origBoard[8]==="0")
         {
             if(here===0)
-            turn(2,aiPlayer);
+            {
+                if(origBoard[2]!=="0"&&origBoard[2]!=="X")
+                turn(2,aiPlayer);
+                else
+                turn(6,aiPlayer);
+            }
             else
-            turn(6,aiPlayer);
+            {
+                if(origBoard[6]!=="0"&&origBoard[6]!=="X")
+                turn(6,aiPlayer);
+                else
+                turn(2,aiPlayer);
+            }
         }
     }
     else if(notsoimp===2&&((origBoard[0]==="0"&&origBoard[8]==="0")||(origBoard[2]==="0"&&origBoard[6]==="0")))
