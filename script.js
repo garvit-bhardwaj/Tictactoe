@@ -1,4 +1,5 @@
 var origBoard;
+var notsoimp=0;
 var aiPlayer='X';
 var huPlayer='0';
 const winCombos=[
@@ -16,6 +17,7 @@ const cells=document.querySelectorAll('.cell');
 startGame();
 
 function startGame(){
+    notsoimp=0;
     document.querySelector(".endgame").style.display="none";
     origBoard=Array.from(Array(9).keys());
     for(var i=0;i<cells.length;i++)
@@ -153,6 +155,7 @@ function turnclick(square){
             break;
         }
     } */
+    notsoimp++;
     aiturn();
     }
 }
@@ -307,6 +310,10 @@ function aiturn()
     else if(origBoard[2]===origBoard[6]&&(origBoard[4]!=="0"&&origBoard[4]!=="X"))
     {
         //console.log("hey");
+        turn(4,aiPlayer);
+    }
+    else if(notsoimp===1&&(origBoard[0]==="0"||origBoard[2]==="0"||origBoard[6]==="0"||origBoard[8]==="0"))
+    {
         turn(4,aiPlayer);
     }
     //no possible winning
