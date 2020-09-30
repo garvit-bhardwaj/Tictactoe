@@ -316,6 +316,18 @@ function aiturn()
     {
         turn(4,aiPlayer);
     }
+    else if(notsoimp===1&&(origBoard[4]==="0"))
+    {
+        let here=Math.floor(Math.random()*4);
+        if(here===0)
+        turn(0,aiPlayer);
+        else if(here===1)
+        turn(2,aiPlayer);
+        else if(here===2)
+        turn(6,aiPlayer);
+        else
+        turn(8,aiPlayer);
+    }
     //no possible winning
     else 
     {
