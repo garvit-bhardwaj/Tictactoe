@@ -328,6 +328,23 @@ function aiturn()
         else
         turn(8,aiPlayer);
     }
+    else if(notsoimp===2&&((origBoard[0]==="0"&&origBoard[8]==="0")||(origBoard[2]==="0"&&origBoard[6]==="0")))
+    {
+        let count=1000;
+        while(count--)
+        {
+            let x=Math.floor(Math.random()*9);
+            //console.log(x);
+            if(origBoard[x]==='X'||origBoard[x]==='0'||x===0||x===2||x===6||x===8)
+            continue;
+            else
+            {
+                //console.log("random");
+                turn(x,aiPlayer);
+                break;
+            }
+        } 
+    }
     //no possible winning
     else 
     {
