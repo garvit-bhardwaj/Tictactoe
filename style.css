@@ -66,9 +66,11 @@ tr td:last-of-type{
     color:#000;
     font-size:2em;
     overflow:hidden;
+    box-shadow:4px 4px 5px #11111130,0px 0px 2px #11111130;
     width:0%;
     opacity:0;
-    transition:0.8s;
+    font-family: 'Piazzolla', serif;
+    transition:1s;
 }
 .text{
     text-align:center;
@@ -81,4 +83,16 @@ tr td:last-of-type{
     height:18%;
     border-radius:10px;
     font-size:1.2rem;
+    background:#abcdef;
+    transition:0.3s;
+    padding-bottom:5px;
+    padding-top:2px;
+}
+#replay:hover{
+    background:#5a3c70;
+    color:white;
+    box-shadow:2px 2px 4px #11111130,0px 0px 2px #11111130;
+}
+#replay:active{
+    transform:translateY(3px);
 }

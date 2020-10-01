@@ -192,6 +192,9 @@ function checktie()
 function gametie()
 {
     document.querySelector(".endgame").style.display="block";
+    document.querySelector(".endgame").style.width="350px";
+    document.querySelector(".endgame").style.opacity="1";
+    document.getElementById("replay").style.display="block";
     document.querySelector(".text").innerText= "It's a tie!";
     for(var i=0;i<cells.length;i++)
     {
