@@ -1,5 +1,6 @@
 var origBoard;
 var notsoimp=0;
+var edgemove=1;
 var aiPlayer='X';
 var huPlayer='0';
 const winCombos=[
@@ -18,6 +19,7 @@ startGame();
 
 function startGame(){
     notsoimp=0;
+    edgemove=0;
     document.querySelector(".endgame").style.display="none";
     origBoard=Array.from(Array(9).keys());
     for(var i=0;i<cells.length;i++)
@@ -218,6 +220,7 @@ function aiturn()
     }
     else if(notsoimp===1)
     {
+        edgemove=1;
         turn(4,aiPlayer);
     }
     // 1st wincombo
@@ -439,6 +442,134 @@ function aiturn()
     {
         //console.log("hey");
         turn(4,aiPlayer);
+    }
+    //1st edge move comb
+    else if(notsoimp===2&&edgemove===1&&(origBoard[1]==="0"&&origBoard[3]==="0"))
+    {
+        let here=Math.floor(Math.random()*3);
+        if(here===0)
+        {
+            if(origBoard[0]!=="0"&&origBoard[0]!=="X")
+            turn(0,aiPlayer);
+            else if(origBoard[2]!=="0"&&origBoard[2]!=="X")
+            turn(2,aiPlayer);
+            else
+            turn(6,aiPlayer);
+        }
+        else if(here===1)
+        {
+            if(origBoard[2]!=="0"&&origBoard[2]!=="X")
+            turn(2,aiPlayer);
+            else if(origBoard[6]!=="0"&&origBoard[6]!=="X")
+            turn(6,aiPlayer);
+            else
+            turn(0,aiPlayer);
+        }
+        else if(here===2)
+        {
+            if(origBoard[6]!=="0"&&origBoard[6]!=="X")
+            turn(6,aiPlayer);
+            else if(origBoard[2]!=="0"&&origBoard[2]!=="X")
+            turn(2,aiPlayer);
+            else
+            turn(0,aiPlayer);
+        }
+    }
+    //2nd edge move combo
+    else if(notsoimp===2&&edgemove===1&&(origBoard[1]==="0"&&origBoard[5]==="0"))
+    {
+        let here=Math.floor(Math.random()*3);
+        if(here===0)
+        {
+            if(origBoard[0]!=="0"&&origBoard[0]!=="X")
+            turn(0,aiPlayer);
+            else if(origBoard[2]!=="0"&&origBoard[2]!=="X")
+            turn(2,aiPlayer);
+            else
+            turn(8,aiPlayer);
+        }
+        else if(here===1)
+        {
+            if(origBoard[2]!=="0"&&origBoard[2]!=="X")
+            turn(2,aiPlayer);
+            else if(origBoard[8]!=="0"&&origBoard[8]!=="X")
+            turn(8,aiPlayer);
+            else
+            turn(0,aiPlayer);
+        }
+        else if(here===2)
+        {
+            if(origBoard[8]!=="0"&&origBoard[8]!=="X")
+            turn(8,aiPlayer);
+            else if(origBoard[0]!=="0"&&origBoard[0]!=="X")
+            turn(0,aiPlayer);
+            else
+            turn(2,aiPlayer);
+        }
+    }
+    //3rd edge move comb
+    else if(notsoimp===2&&edgemove===1&&(origBoard[3]==="0"&&origBoard[7]==="0"))
+    {
+        let here=Math.floor(Math.random()*3);
+        if(here===0)
+        {
+            if(origBoard[0]!=="0"&&origBoard[0]!=="X")
+            turn(0,aiPlayer);
+            else if(origBoard[6]!=="0"&&origBoard[6]!=="X")
+            turn(6,aiPlayer);
+            else
+            turn(8,aiPlayer);
+        }
+        else if(here===1)
+        {
+            if(origBoard[6]!=="0"&&origBoard[6]!=="X")
+            turn(6,aiPlayer);
+            else if(origBoard[8]!=="0"&&origBoard[8]!=="X")
+            turn(8,aiPlayer);
+            else
+            turn(0,aiPlayer);
+        }
+        else if(here===2)
+        {
+            if(origBoard[8]!=="0"&&origBoard[8]!=="X")
+            turn(8,aiPlayer);
+            else if(origBoard[0]!=="0"&&origBoard[0]!=="X")
+            turn(0,aiPlayer);
+            else
+            turn(6,aiPlayer);
+        }
+    }
+    //4th win combo
+    else if(notsoimp===2&&edgemove===1&&(origBoard[5]==="0"&&origBoard[7]==="0"))
+    {
+        let here=Math.floor(Math.random()*3);
+        if(here===0)
+        {
+            if(origBoard[2]!=="0"&&origBoard[2]!=="X")
+            turn(2,aiPlayer);
+            else if(origBoard[6]!=="0"&&origBoard[6]!=="X")
+            turn(6,aiPlayer);
+            else
+            turn(8,aiPlayer);
+        }
+        else if(here===1)
+        {
+            if(origBoard[6]!=="0"&&origBoard[6]!=="X")
+            turn(6,aiPlayer);
+            else if(origBoard[8]!=="0"&&origBoard[8]!=="X")
+            turn(8,aiPlayer);
+            else
+            turn(2,aiPlayer);
+        }
+        else if(here===2)
+        {
+            if(origBoard[8]!=="0"&&origBoard[8]!=="X")
+            turn(8,aiPlayer);
+            else if(origBoard[2]!=="0"&&origBoard[2]!=="X")
+            turn(2,aiPlayer);
+            else
+            turn(6,aiPlayer);
+        }
     }
     else if(notsoimp===2&&(origBoard[4]==="0")&&(origBoard[0]==="0"||origBoard[2]==="0"||origBoard[6]==="0"||origBoard[8]==="0"))
     {
