@@ -575,7 +575,7 @@ function aiturn()
         }
     }
     //5th edge move comb
-    else if(notsoimp===2&&edgemove===1&&(origBoard[1]==="0"&&origBoard[6]==="0"))
+    else if(notsoimp===2&&(origBoard[1]==="0"&&origBoard[6]==="0"))
     {
         let here= Math.floor(Math.random()*2);
         if(here===0)
@@ -584,7 +584,7 @@ function aiturn()
         turn(3,aiPlayer);
     }
     //6th edge move comb
-    else if(notsoimp===2&&edgemove===1&&(origBoard[1]==="0"&&origBoard[8]==="0"))
+    else if(notsoimp===2&&(origBoard[1]==="0"&&origBoard[8]==="0"))
     {
         let here= Math.floor(Math.random()*2);
         if(here===0)
@@ -593,7 +593,7 @@ function aiturn()
         turn(5,aiPlayer);
     }
     //7th edge move comb
-    else if(notsoimp===2&&edgemove===1&&(origBoard[2]==="0"&&origBoard[3]==="0"))
+    else if(notsoimp===2&&(origBoard[2]==="0"&&origBoard[3]==="0"))
     {
         let here= Math.floor(Math.random()*2);
         if(here===0)
@@ -602,7 +602,7 @@ function aiturn()
         turn(1,aiPlayer);
     }
     //8th edge move comb
-    else if(notsoimp===2&&edgemove===1&&(origBoard[3]==="0"&&origBoard[8]==="0"))
+    else if(notsoimp===2&&(origBoard[3]==="0"&&origBoard[8]==="0"))
     {
         let here= Math.floor(Math.random()*2);
         if(here===0)
@@ -611,7 +611,7 @@ function aiturn()
         turn(7,aiPlayer);
     }
     //9th edge move comb
-    else if(notsoimp===2&&edgemove===1&&(origBoard[0]==="0"&&origBoard[5]==="0"))
+    else if(notsoimp===2&&(origBoard[0]==="0"&&origBoard[5]==="0"))
     {
         let here= Math.floor(Math.random()*2);
         if(here===0)
@@ -620,7 +620,7 @@ function aiturn()
         turn(2,aiPlayer);
     }
     //10th edge comb
-    else if(notsoimp===2&&edgemove===1&&(origBoard[5]==="0"&&origBoard[6]==="0"))
+    else if(notsoimp===2&&(origBoard[5]==="0"&&origBoard[6]==="0"))
     {
         let here= Math.floor(Math.random()*2);
         if(here===0)
@@ -629,7 +629,7 @@ function aiturn()
         turn(8,aiPlayer);
     }
     //11th edge move comb
-    else if(notsoimp===2&&edgemove===1&&(origBoard[0]==="0"&&origBoard[7]==="0"))
+    else if(notsoimp===2&&(origBoard[0]==="0"&&origBoard[7]==="0"))
     {
         let here= Math.floor(Math.random()*2);
         if(here===0)
@@ -638,7 +638,7 @@ function aiturn()
         turn(6,aiPlayer);
     }
     //12th edge move comb
-    else if(notsoimp===2&&edgemove===1&&(origBoard[2]==="0"&&origBoard[7]==="0"))
+    else if(notsoimp===2&&(origBoard[2]==="0"&&origBoard[7]==="0"))
     {
         let here= Math.floor(Math.random()*2);
         if(here===0)
