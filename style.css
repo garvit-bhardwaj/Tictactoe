@@ -65,7 +65,10 @@ tr td:last-of-type{
     border-radius:5px;
     color:#000;
     font-size:2em;
-    display:none;
+    overflow:hidden;
+    width:0%;
+    opacity:0;
+    transition:0.8s;
 }
 .text{
     text-align:center;

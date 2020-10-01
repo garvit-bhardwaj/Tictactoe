@@ -13,7 +13,11 @@ startGame();
 function startGame(){
     notsoimp=0;
     edgemove=0;
-    document.querySelector(".endgame").style.display="none";
+    document.querySelector(".endgame").style.width="0%";
+    document.querySelector(".text").innerText="";
+    document.querySelector(".endgame").style.opacity="0";
+    document.getElementById("replay").style.display="none";
+    //document.querySelector(".endgame").style.height="0px";
     origBoard=Array.from(Array(9).keys());
     for(var i=0;i<cells.length;i++)
     {
@@ -123,7 +127,10 @@ function gameOver(winner)
     displaywin="A.I. ";
     else
     displaywin="You ";
-    document.querySelector(".endgame").style.display="block";
+    document.querySelector(".endgame").style.width="350px";
+  //  document.querySelector(".endgame").style.height="175px";
+    document.querySelector(".endgame").style.opacity="1";
+    document.getElementById("replay").style.display="block";
     document.querySelector(".text").innerText= displaywin + "won";
     for(var i=0;i<cells.length;i++)
     {
