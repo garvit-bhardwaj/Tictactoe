@@ -12,9 +12,11 @@ body{
 
 h1{
     text-align:center;
+    text-shadow:2px 3px #11111130;
 }
 h1:first-of-type{
     transform:translateY(15px);
+    letter-spacing:4px;
 }
 
 table{
