@@ -26,7 +26,6 @@ function startGame(){
         document.getElementById(i).addEventListener("click",turnclick);
     }
 }
-
 function gamewon()
 {
     if(((origBoard[0]===origBoard[1])&&(origBoard[1]===origBoard[2])))
@@ -577,73 +576,41 @@ function aiturn()
     //5th edge move comb
     else if(notsoimp===2&&(origBoard[1]==="0"&&origBoard[6]==="0"))
     {
-        let here= Math.floor(Math.random()*2);
-        if(here===0)
-        turn(0,aiPlayer);
-        else
-        turn(3,aiPlayer);
+       turn(0,aiPlayer);
     }
     //6th edge move comb
     else if(notsoimp===2&&(origBoard[1]==="0"&&origBoard[8]==="0"))
     {
-        let here= Math.floor(Math.random()*2);
-        if(here===0)
         turn(2,aiPlayer);
-        else
-        turn(5,aiPlayer);
     }
     //7th edge move comb
     else if(notsoimp===2&&(origBoard[2]==="0"&&origBoard[3]==="0"))
     {
-        let here= Math.floor(Math.random()*2);
-        if(here===0)
         turn(0,aiPlayer);
-        else
-        turn(1,aiPlayer);
     }
     //8th edge move comb
     else if(notsoimp===2&&(origBoard[3]==="0"&&origBoard[8]==="0"))
     {
-        let here= Math.floor(Math.random()*2);
-        if(here===0)
         turn(6,aiPlayer);
-        else
-        turn(7,aiPlayer);
     }
     //9th edge move comb
     else if(notsoimp===2&&(origBoard[0]==="0"&&origBoard[5]==="0"))
     {
-        let here= Math.floor(Math.random()*2);
-        if(here===0)
-        turn(1,aiPlayer);
-        else
         turn(2,aiPlayer);
     }
     //10th edge comb
     else if(notsoimp===2&&(origBoard[5]==="0"&&origBoard[6]==="0"))
     {
-        let here= Math.floor(Math.random()*2);
-        if(here===0)
-        turn(7,aiPlayer);
-        else
         turn(8,aiPlayer);
     }
     //11th edge move comb
     else if(notsoimp===2&&(origBoard[0]==="0"&&origBoard[7]==="0"))
     {
-        let here= Math.floor(Math.random()*2);
-        if(here===0)
-        turn(3,aiPlayer);
-        else
         turn(6,aiPlayer);
     }
     //12th edge move comb
     else if(notsoimp===2&&(origBoard[2]==="0"&&origBoard[7]==="0"))
     {
-        let here= Math.floor(Math.random()*2);
-        if(here===0)
-        turn(5,aiPlayer);
-        else
         turn(8,aiPlayer);
     }
     else if(notsoimp===2&&(origBoard[4]==="0")&&(origBoard[0]==="0"||origBoard[2]==="0"||origBoard[6]==="0"||origBoard[8]==="0"))
