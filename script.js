@@ -10,6 +10,17 @@ const winCombos=[
 const cells=document.querySelectorAll('.cell');
 startGame();
 
+var colormode=document.getElementById("mode");
+colormode.onclick=function(){
+    document.body.classList.toggle("dark-theme");
+    if(document.body.classList.contains("dark-theme")){
+        colormode.src="https://img.icons8.com/emoji/38/000000/sun-emoji.png";
+    }
+    else{
+        colormode.src="https://img.icons8.com/ios-filled/40/000000/crescent-moon.png";
+    }
+}
+
 function startGame(){
     notsoimp=0;
     edgemove=0;
